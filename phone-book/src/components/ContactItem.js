@@ -7,11 +7,7 @@ const ContactItem = (props) => {
     navigate(`${props.id}`);
   };
   return (
-    <div
-      onClick={clickHandler}
-      className={classes.card}
-      style={{  }}
-    >
+    <div onClick={clickHandler} className={classes.card}>
       <div className={classes.img}>IMG</div>
       <div>{props.name}</div>
     </div>
