@@ -22,6 +22,7 @@ const route = createBrowserRouter([
               flexDirection: "column",
               alignItems: "center",
               gap: "2rem",
+              justifyContent: "center",
             }}
           >
             <div>Please select a contact from your phone book</div>

@@ -1,14 +1,17 @@
 .contactNav {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 50%;
   border-right: 1px rgb(55, 55, 55) solid;
   gap: 1.5rem;
+  height: 100%;
+  overflow: scroll;
 }
 .layout {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
   align-items: center;
+  height: 100vh;
 }
