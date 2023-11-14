@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PhoneBook from "./contacts-navbar/PhoneBook";
 import ContactDetail from "./components/ContactDetail";
 import ContextProvider from "./context-store/context";
+import AddContact from "./components/AddContact";
 
 const route = createBrowserRouter([
   {
@@ -12,12 +13,24 @@ const route = createBrowserRouter([
       {
         index: true,
         element: (
-          <div style={{ width: "50%", textAlign: "center", color: "white" }}>
-            Please select a contact from your phone book
+          <div
+            style={{
+              width: "50%",
+              textAlign: "center",
+              color: "white",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: "2rem",
+            }}
+          >
+            <div>Please select a contact from your phone book</div>
+            <AddContact />
           </div>
         ),
       },
       { path: ":contactId", element: <ContactDetail /> },
+      { path: "/newContact", element: <ContactDetail /> },
     ],
   },
 ]);
