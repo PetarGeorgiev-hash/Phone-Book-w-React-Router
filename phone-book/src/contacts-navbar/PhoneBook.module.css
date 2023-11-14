@@ -1,0 +1,14 @@
+.contactNav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 50%;
+  border-right: 1px rgb(55, 55, 55) solid;
+  gap: 1.5rem;
+}
+.layout {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
