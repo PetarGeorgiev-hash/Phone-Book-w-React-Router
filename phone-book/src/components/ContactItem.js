@@ -10,7 +10,7 @@ const ContactItem = (props) => {
     <div
       onClick={clickHandler}
       className={classes.card}
-      style={{ padding: "1.5rem 0 ", width: "90%", color: "white" }}
+      style={{  }}
     >
       <div className={classes.img}>IMG</div>
       <div>{props.name}</div>

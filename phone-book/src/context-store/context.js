@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const DUMMY_CONTACTS = [
   {
@@ -128,10 +129,39 @@ export const PhonesContext = createContext({
 });
 
 export default function ContextProvider(props) {
-  const [contact, setContacts] = useState(DUMMY_CONTACTS);
+  const [contacts, setContacts] = useState(DUMMY_CONTACTS);
+
+  function editContact(contactInfo) {
+    setContacts((prevContacts) => {
+      const contactToEditIndex = prevContacts.findIndex(
+        (contact) => contact.id === contactInfo.id
+      );
+
+      if (!contactToEditIndex || contactToEditIndex === -1) {
+        contactInfo.id = Math.random();
+        return [contactInfo, ...prevContacts];
+      }
+      const newPhoneObj = [...prevContacts];
+      newPhoneObj[contactToEditIndex] = contactInfo;
+      return [...newPhoneObj];
+    });
+  }
+
+  function deleteContact(contactInfo) {
+    debugger;
+    setContacts((prevContacts) => {
+      const contactToDeleteIndex = prevContacts.findIndex(
+        (contact) => contact.id === contactInfo.id
+      );
+      prevContacts.splice(contactToDeleteIndex, 1);
+      return [...prevContacts];
+    });
+  }
 
   const ctxValue = {
-    phonesBook: contact,
+    phonesBook: contacts,
+    editContactInfo: editContact,
+    deleteContactInfo: deleteContact,
   };
 
   return (

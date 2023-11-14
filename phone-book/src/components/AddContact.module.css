@@ -1,0 +1,14 @@
+.addContact {
+  width: 12rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px rgb(55, 55, 55) solid;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+.addContact:hover {
+  background-color: #1f1f1f;
+}
