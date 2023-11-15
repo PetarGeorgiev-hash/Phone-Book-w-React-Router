@@ -9,7 +9,7 @@ const ContactItem = (props) => {
   return (
     <div onClick={clickHandler} className={classes.card}>
       <div className={classes.img}>IMG</div>
-      <div>{props.name}</div>
+      <div className={classes.name}>{props.name}</div>
     </div>
   );
 };
