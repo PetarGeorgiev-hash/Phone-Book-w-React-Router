@@ -15,3 +15,9 @@
   align-items: center;
   height: 100vh;
 }
+
+@media (max-width: 390px) {
+  .layout {
+    gap: 0.4rem;
+  }
+}
